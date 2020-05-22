@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/css/uikit.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Dashboard</title>
+</head>
+<body>
+
+   <div id="output">
+   </div>
+<center><h1 style="margin-top:10px;">COVID-19 Live Data</h1></center>
+<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+    <div>
+        <div style="margin-left:10px; margin-right:10px; margin-top: 20px;"class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title ">Total Cases Worldwide:</h3>
+            <p style="color:blue; font-weight: bold; font-size: 80px;" id="total-cases"></p>Last Updated:<p style="color:grey; " id="date-total"></p>
+        </div>
+    </div>
+    <div>
+        <div style= "margin-left:10px; margin-right:10px; margin-top: 20px;" class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Total Deaths Worldwide:</h3>
+            <p style="color:red; font-weight: bold; font-size: 80px;" id='total-deaths'></p></p>Last Updated:<p style="color:grey; " id="date-deaths"></p>
+        </div>
+    </div>
+    <div>
+        <div style= "margin-left:10px; margin-right:10px; margin-top: 20px;"  class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Recovered Worldwide:</h3>
+            <p style="color:#0cc919; font-weight: bold; font-size: 80px;" id="total-recovered"></p>Last Updated:<p style="color:grey; " id="date-recovered"></p>
+        </div>
+    </div>
+</div>
+
+
+<div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center " uk-grid>
+    <div  class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-align-center">
+        <div class="uk-card-badge uk-label">Beta</div>
+        <h3 class="uk-card-title">Historical Data (UK) </h3>
+        <canvas id="myChart"></canvas>
+    </div>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCXzzH361T-lnAMu8h35lz4_UvAu3X4IVM",
+        authDomain: "fdappprod.firebaseapp.com",
+        databaseURL: "https://fdappprod.firebaseio.com",
+        projectId: "fdappprod",
+        storageBucket: "fdappprod.appspot.com",
+        messagingSenderId: "908389313134",
+        appId: "1:908389313134:web:e9304264d0529ddb19d47f",
+        measurementId: "G-692GYXMQ9R"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.js"></script>
+<script src="index.js"></script>
+</html>
