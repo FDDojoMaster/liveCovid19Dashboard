@@ -43,7 +43,6 @@ window.onload = async function () {
         redirect: 'follow'
     };
 
-    const live_date = new Date()
 
     fetch("https://api.covid19api.com/total/country/united-kingdom", requestOptions)
         .then(response => response.json())
