@@ -11,4 +11,14 @@ https://covid19api.com/
 
 https://rapidapi.com/Gramzivi/api/covid-19-data
 
+
+
+Additional Setup:
+
+Firebase Analytics, Replace with own config code in <code> index.html </code>.
+
+Run <code> npm install </code> to install all required dependencies, I have tried to use CDN builds included in the HTML to minimise this! 
+
 Feel free to edit! Make sure you credit though!
+
+The DojoMaster
