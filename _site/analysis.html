@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/css/uikit.min.css" />
+    <script src="https://kit.fontawesome.com/c0c91ead9d.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -20,8 +21,9 @@
     </nav>
 
 
-    <div style="margin-top:80px;" class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-position-center">
-        <h3 class="uk-card-title">Search By Country <span uk-icon="icon: search"></span> </h3>
+    <div style="margin-top:80px" class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-position-center uk-align-center">
+        <h3 class="uk-card-title">Search By Country <span uk-icon="icon: search"></span> </h3> 
+        <p id="subtitle"></p>
         <div class="uk-width-1-1@s">
     <form id="getCountryData">
             <input id="country" class="uk-input" type="text" placeholder="Country" required>
@@ -35,18 +37,22 @@
 
 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
-        <p>Cases</p>
-        <div class="uk-card uk-card-default uk-card-body"><p id="cases"></p></div>
+        <p>Cases  </br><i class="fas fa-medkit"></i></p>
+        <div class="uk-card uk-card-default uk-card-body"><p style="color: blue;"id="cases"></p></div>
     </div>
     <div>
-        <p>Deaths</p>
-        <div class="uk-card uk-card-default uk-card-body"><p id="deaths"></p></div>
+        <p>Deaths </br><i class="fas fa-heartbeat"></i></p>
+        <div class="uk-card uk-card-default uk-card-body"><p style="color:red" id="deaths"></p></div>
     </div>
     <div>
-        <div class="uk-card uk-card-default uk-card-body"><p>Item</p></div>
+        <p>Recovered </br><i class="fas fa-heart"></i> </p>
+        
+        <div class="uk-card uk-card-default uk-card-body"><p style="color: green" id="recovered"></p></div>
     </div>
-</div>
+    
 
+</div>
+</div>
     
 
 
@@ -56,5 +62,6 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="https://kit.fontawesome.com/c0c91ead9d.js" crossorigin="anonymous"></script>
 <script src="analysis.js"></script>
 </html>

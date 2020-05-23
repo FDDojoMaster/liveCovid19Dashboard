@@ -23,14 +23,12 @@ window.onload = async function() {
                 // Search in `author` and in `tags` array
                 keys: ['name']
             }
-
             const fuse = new Fuse(countryList, options)
-
             const result = fuse.search(query)
             const country = result[0].item;
             console.log(country)
-
-
+            document.getElementById('subtitle').innerHTML = 'Showing results for : ' + ' ' + country
+        
 
             fetch(`https://covid-19-data.p.rapidapi.com/country?format=json&name=${country}`, {
                 "method": "GET",
@@ -42,6 +40,7 @@ window.onload = async function() {
                 console.log(res)
                 document.getElementById('cases').innerHTML = numeral(res[0].confirmed).format('0,0');
                 document.getElementById('deaths').innerHTML =numeral( res[0].deaths).format('0,0');
+                document.getElementById('recovered').innerHTML = numeral(res[0].recovered).format('0,0');
 
 
             }).catch(err => {
