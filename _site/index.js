@@ -6,7 +6,7 @@ window.onload = async function () {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
-            "x-rapidapi-key": "09334c3e16msh8b4374b674eb5c3p141527jsnc78976ce9cf3"
+            "x-rapidapi-key": "YOUR-API-KEY"
         }
     }).then(response => response.json())
         .then((res) => {
